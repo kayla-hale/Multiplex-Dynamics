@@ -10,30 +10,30 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % SYSTEM REQUIREMENTS
 % Hardware Requirements
 % 	A standard laptop computer should suffice to run this code. It has
-%	been tested with a MacBook with 2.2 GHz Intel i7 Processor and 16 
-%	GB Memory.
+%	  been tested with a MacBook with 2.2 GHz Intel i7 Processor and 16 
+%	  GB Memory.
 %
 % Software Requirements
 %	  This code is supported for MATLAB R2018b or later. It has been 
-%	  tested on macOS Mojave 10.14.6. Some functions use the Parallel 
-%   Computing Toolbox, but that is optional and comments in the scripts
-%	  specify how to avoid that.
+%	  tested on macOS Mojave 10.14.6. Some functions use the Parallel
+%   Computing Toolbox, but that is optional, as described by comments 
+%   in the scripts.
 %
 % INSTALLATION
 % 	To use this code, download the whole folder and use it as a
 % 	working directory for MATLAB R2018b or later. Execute
 % 	RUN_DEMO_SIMULATIONS.m. The code is working correctly if it produces
 % 	six figures that match the panels in Fig. S1 of the manuscript 
-%	(expect approximately 2 minutes for run time). 
+%	  (expect approximately 2 minutes for run time). 
 %
 % REPRODUCTION
 %	To fully reproduce the main-text results, use the
 %	RUN_MULTIPLEX_SIMULATIONS.m & RUN_FOOD_WEB_SIMULATIONS.m scripts
-% 	as specified in their description (i.e. for both "RO" and "RP"
+% as specified in their description (i.e. for both "RO" and "RP"
 %	treatments). Then, use ANALYZE_MULTIPLEX.m & ANALYZE_MULTIPLEX_CVS.m
 %	scripts for the multiplex simulations or ANALYZE_FOOD_WEB.m & 
 %	ANALYZE_FOOD_WEB_CVS.m to generate space-separated .txt files of all
-% 	outputs used in the main-text figures. These functions run & analyze
+% outputs used in the main-text figures. These functions run & analyze
 %	dynamic simulations given network structures and parameter sets as 
 %	inputs, which are included in this folder. See below for description.
 %	The Methods section and Figure legends describe how summary statistics
@@ -71,7 +71,7 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % Other Notes
 % Individual functions are quite thoroughly commented. The remainder of 
 % 	this README describes the inter-dependencies between the functions and 
-%	the nature of the data/input files. 
+%	  the nature of the data/input files. 
 %
 
 % -------------------------------------------------------------------------
