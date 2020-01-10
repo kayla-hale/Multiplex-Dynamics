@@ -1,8 +1,5 @@
-# Multiplex-Dynamics
-Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic interactions increase diversity, stability, and function in multiplex networks
-
 % All code in this folder is companion to the manuscript: 
-% Hale et al. 2020 Pollinators in food webs: Mutualistic interactions 
+% Hale et al. 2019 Pollinators in food webs: Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 % See the main-text Methods for a detailed description of the dynamic 
 %   models and analysis implemented in this code.
@@ -10,41 +7,41 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % SYSTEM REQUIREMENTS
 % Hardware Requirements
 % 	A standard laptop computer should suffice to run this code. It has
-%	  been tested with a MacBook with 2.2 GHz Intel i7 Processor and 16 
-%	  GB Memory.
+%	been tested with a MacBook with 2.2 GHz Intel i7 Processor and 16 
+%	GB Memory.
 %
 % Software Requirements
-%	  This code is supported for MATLAB R2018b or later. It has been 
-%	  tested on macOS Mojave 10.14.6. Some functions use the Parallel
-%   Computing Toolbox, but that is optional, as described by comments 
-%   in the scripts.
+%	This code is supported for MATLAB R2018b or later. It has been 
+%	tested on macOS Mojave 10.14.6. Some functions use the Parallel 
+% 	Computing Toolbox, but that is optional and comments in the scripts
+%	specify how to avoid that.
 %
 % INSTALLATION
 % 	To use this code, download the whole folder and use it as a
 % 	working directory for MATLAB R2018b or later. Execute
 % 	RUN_DEMO_SIMULATIONS.m. The code is working correctly if it produces
-% 	six figures that match the panels in Fig. S1 of the manuscript 
-%	  (expect approximately 2 minutes for run time). 
+% 	six figures that match the panels in Fig. S4 of the manuscript 
+%	(expect approximately 2 minutes for run time). 
 %
 % REPRODUCTION
 %	To fully reproduce the main-text results, use the
 %	RUN_MULTIPLEX_SIMULATIONS.m & RUN_FOOD_WEB_SIMULATIONS.m scripts
-% as specified in their description (i.e. for both "RO" and "RP"
+% 	as specified in their description (i.e. for both "RO" and "RP"
 %	treatments). Then, use ANALYZE_MULTIPLEX.m & ANALYZE_MULTIPLEX_CVS.m
 %	scripts for the multiplex simulations or ANALYZE_FOOD_WEB.m & 
 %	ANALYZE_FOOD_WEB_CVS.m to generate space-separated .txt files of all
-% outputs used in the main-text figures. These functions run & analyze
+% 	outputs used in the main-text figures. These functions run & analyze
 %	dynamic simulations given network structures and parameter sets as 
 %	inputs, which are included in this folder. See below for description.
 %	The Methods section and Figure legends describe how summary statistics
 %	including means and standard deviations across treatment and for each
 %	level of initial diversity within treatments were calculated. These
 %	calculations are easily performed in JMP (version Pro 14 was used to
-%	create main-text Figs. 4 & 5).
+%	create main-text Figures 3 & 4).
 %
 % LICENSE
 % 	The MIT License (MIT)
-% 	Copyright (c) 2020 Kayla R. S. Hale
+% 	Copyright (c) 2019 Kayla R. S. Hale
 %
 % Permission is hereby granted, free of charge, to any person obtaining a copy
 % of this software and associated documentation files (the "Software"), to deal
@@ -65,13 +62,13 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % SOFTWARE.
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
+% Hale, K.R.S. (2019). Pollinators in food webs: Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 %
 % Other Notes
-% Individual functions are quite thoroughly commented. The remainder of 
+%	Individual functions are quite thoroughly commented. The remainder of 
 % 	this README describes the inter-dependencies between the functions and 
-%	  the nature of the data/input files. 
+%	the nature of the data/input files. 
 %
 
 % -------------------------------------------------------------------------
@@ -80,7 +77,7 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % RUN_DEMO_SIMULATIONS.m takes a single network subjected to all six 
 % main-text treatments (RO FW, RO Low, RO High, RP FW, RP Low, RP High), 
 % simulates dynamics, and displays the associated timeseries and persistence.
-% These simulations correspond to those shown in Fig. S1. I
+% These simulations correspond to those shown in Fig. 2 and Fig. S4. I
 % recommend exploring these timeseries and the code that generated them to
 % familiarize yourself with the model used in this paper. A description of
 % the functions and other inputs RUN_DEMO_SIMULATIONS needs is given below.
@@ -94,8 +91,8 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % structs. Each struct has 27 fields that describe the structural properties
 % of the network (not all of them necessary for this manuscript).
 %   fileID: a string describing the pollination sub-network (p) and niche  
-%       model (f) used to construct the whole network (see Main-Text Fig. 2 
-%       and Methods S1 for details of network construction).
+%       model (f) used to construct the whole network (see Main-Text Fig. 1 
+%       and Methods S2 for details of network construction).
 %   S: number of species (initial diversity)
 %   N: number of state variables including rewards
 %   feeding_C: connectance of the niche model food web
@@ -114,10 +111,10 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 %       nodes are in S+1:N. Food web networks are SxS. 
 %   plants, app, rewards, etc.: vectors of indices identifying species in 
 %       that guild. If a guild is empty, the vector is empty also (== []).
-%	In particular, TL2 is the union of herbivores and added-animals.
+%	In particular, TL2 is the union of herbivores and added-species.
 %   pollinator_list: an array of structs, with each struct a list of
 %       pollinators that link to that app's rewards node
-%   C: connectance of the entire network (see Fig. S4)
+%   C: connectance of the entire network (see Figure S3)
 %
 % The METABOLICS .mat files provide metabolic rate, which is used to 
 % calculate allometrically-scaled parameters in the DYNAMICS functions. The 
@@ -172,5 +169,5 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % are performed by the ANALYZE scripts. All analyses except for species and 
 % guild variability are performed in the ANALYZE_FOOD_WEB.m or
 % ANALYZE_MULTIPLEX.m scripts by reading in all OUTPUT .mat files generated
-% from the RUN_ scripts. Variability is calculated with the ANALYZE_ CVs.m
+% from the RUN_ scripts. Variability is calculated with the ANALYZE_ _CVs.m
 % scripts by reading in the SOLUTION .mat files. 
