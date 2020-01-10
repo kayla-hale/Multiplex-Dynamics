@@ -21,7 +21,7 @@ function [competition] = calc_competition(competition_model,B,plants,K,sum_R)
 %       over time from the original simulations)
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs?Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs?Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 
     switch(competition_model)

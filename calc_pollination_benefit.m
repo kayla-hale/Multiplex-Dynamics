@@ -21,7 +21,7 @@ function [realized_pollination_benefit] = calc_pollination_benefit(benefit_model
 %   	services functional response
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs?Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs?Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
     
     switch(benefit_model)

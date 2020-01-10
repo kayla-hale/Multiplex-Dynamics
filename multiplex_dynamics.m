@@ -36,7 +36,7 @@ function[output, solution] = multiplex_dynamics(network_struct, metabolics_struc
 %   display_figures is a logical flag, when == 1 plots a timeseries
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs: Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 
 % -----------------------------------------------------------------------%

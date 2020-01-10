@@ -22,7 +22,7 @@ function[production, consumption_on, consumption_by, metabolic_loss, realized_be
 %       the number of state variables
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs: Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 
 % (2) Format Inputs & Declare Parameters

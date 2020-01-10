@@ -2,8 +2,8 @@ function plot_timeseries(this_network,solution)
 %PLOT_TIMESERIES Plot a log-log dynamical timeseries, with 
 %species' abundances over time colored according to their guilds. The
 %figure this function generates corresponds to the panels in Fig. 
-%S4. To match Fig. 2 of the Main-Text, comment out lines referring to
-%rewards and adjust the legend. This function works for both multiplex
+%S1. 
+%This function works for both multiplex
 %networks (with rewards) and FWs (no rewards). It also prints the species
 %persistence in the title of the figure, calculated assuming the extinction
 %threshold is 10^(-6). The y-axis is set to a minimum of 10^(-4) & maximum
@@ -15,7 +15,7 @@ function plot_timeseries(this_network,solution)
 %       species or rewards) whose biomass is changing over time
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs?Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs?Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 
 % initial diversity

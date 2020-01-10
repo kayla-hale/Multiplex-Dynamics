@@ -20,7 +20,7 @@ function[production, consumption_on, consumption_by, metabolic_loss] = ...
 %   B is an Sx1 vector of biomasses, at which to evaluate flows
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs: Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 
 % (2) Format Inputs & Declare Parameters

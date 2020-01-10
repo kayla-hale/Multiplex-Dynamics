@@ -1,10 +1,10 @@
 % A demo of the dynamic model on network structure 2978 subjected to each 
 % of the six treatments (RO FW, RO Low, RO High, RP FW, RP Low, RP High).
-% Expected output should match Fig. S4, with explanation in Fig. S4 and
-% Fig. 2 of the Main Text. Computation time should be approximately 2 mins.
+% Expected output should match Fig. S1. Computation time should be 
+% approximately 2 mins.
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2019). Pollinators in food webs: Mutualistic interactions 
+% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
 %   increase diversity, stability, and function in multiplex networks
 
 demo_network = 2978;
