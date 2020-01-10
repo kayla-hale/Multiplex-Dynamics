@@ -1,5 +1,6 @@
 % A demo of the dynamic model on network structure 2978 subjected to each 
 % of the six treatments (RO FW, RO Low, RO High, RP FW, RP Low, RP High).
+% Requires the .mat files in the Multiplex_Dynamics_Data folder.
 % Expected output should match Fig. S1. Computation time should be 
 % approximately 2 mins.
 %
