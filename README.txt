@@ -70,7 +70,7 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 %
 % Other Notes
 %	Individual functions are quite thoroughly commented. The remainder of 
-% 	this README describes the inter-dependencies between the functions and 
+% this README describes the inter-dependencies between the functions and 
 %	the nature of the data/input files. 
 %
 
