@@ -1,33 +1,16 @@
 % A demo of the dynamic model on network structure 2978 subjected to each 
 % of the six treatments (RO FW, RO Low, RO High, RP FW, RP Low, RP High).
-% Requires the .mat files in the Multiplex_Dynamics_Data folder.
-% Expected output should match Fig. S1. Computation time should be 
-% approximately 2 mins.
+% Expected output should match Fig. 3. Computation time should be 
+% approximately 2 mins. Full network structure and parameterization 
+% available in a public google drive at: https://tinyurl.com/qr4xbdd (also 
+% see README). 
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
-%   increase diversity, stability, and function in multiplex networks
-
-demo_network = 2978;
+% Hale, K.R.S. (2020). Mutualistic interactions increase diversity, 
+%   stability, and function in multiplex networks of pollinators in food webs
 
 disp('Loading network structures and parameters...')
-load('simulation_parameters.mat','parameter_set')
-
-% food webs
-load('networks_RO_FW.mat')
-load('metabolics_RO_FW.mat')
-
-% multiplex
-load('networks_RO.mat')
-load('metabolics_RO.mat')
-
-% food webs
-load('networks_RP_FW.mat')
-load('metabolics_RP_FW.mat')
-
-% multiplex
-load('networks_RP.mat')
-load('metabolics_RP.mat')
+load('parameterization.mat')
 
 num_networks = numel(networks_RO_FW);
 num_parameter_sets = numel(parameter_set.food_web);
@@ -36,7 +19,7 @@ num_simulations = num_networks * num_parameter_sets;
 display_figures = 1;
 
 % Run food webs (FW) and Low Multiplex...
-i = demo_network;
+i = 1; 
 this_network = mod(i,num_networks);
 this_set = floor(i/(num_networks)) + 1;
 

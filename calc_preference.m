@@ -14,8 +14,8 @@ function [omega] = calc_preference(preference_model,I)
 %       column j and 0 indicates no interaction
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2020). Pollinators in food webs?Mutualistic interactions 
-%   increase diversity, stability, and function in multiplex networks
+% Hale, K.R.S. (2020). Mutualistic interactions increase diversity, 
+%   stability, and function in multiplex networks of pollinators in food webs
 
     switch(preference_model)
         case 'weak'

@@ -15,8 +15,8 @@ function plot_timeseries(this_network,solution)
 %       species or rewards) whose biomass is changing over time
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2020). Pollinators in food webs?Mutualistic interactions 
-%   increase diversity, stability, and function in multiplex networks
+% Hale, K.R.S. (2020). Mutualistic interactions increase diversity, 
+%   stability, and function in multiplex networks of pollinators in food webs
 
 % initial diversity
 S = this_network.S;
@@ -46,10 +46,10 @@ colors = ...
     255 0 0; ... % 2: omnivores
     255 153 0; ... % 3: omni polls
     204 255 51; ... % 4: herb polls
-    51 255 204; ... % 5: herbivores
-    153 51 204; ... % 6: rewards
-    51 153 255; ... % 7: app
-    0 0 255]./256; % 8: wind
+    51 204 153; ... % 5: herbivores
+    204 102 255; ... % 6: rewards
+    153 51 153; ... % 7: app
+    54 32 99]./256; % 8: wind
     
 figure
 
@@ -102,8 +102,10 @@ xlabel('log10 Time Steps')
 ylabel('log10 Biomass')
 legend('Carnivores','Omnivores','+Omnivores/Pollinators','+Herbivores/Pollinators',...
     'Herbivores','Rewards','Plants w/ Pollinators','Plants w/o Pollinators'); 
-grid on
-% grid minor
+% arcane series of commands to show main grid but not all the lines on log scale
+grid minor
+grid off
+grid on 
 title(['Persistence = ' num2str(S_persist*100,3) '%'])
 xlim([1 x_max])
 set(gcf,'color','w');

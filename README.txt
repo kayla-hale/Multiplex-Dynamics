@@ -1,10 +1,11 @@
 # Multiplex-Dynamics
-Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic interactions increase diversity, stability, and function in multiplex networks
+Companion code for Hale et al. 2020: Mutualistic interactions increase diversity, stability, and function in multiplex networks of pollinators in food webs
 
 % All code in this folder is companion to the manuscript: 
-% Hale et al. 2020 Pollinators in food webs: Mutualistic interactions 
-%   increase diversity, stability, and function in multiplex networks
-% See the main-text Methods for a detailed description of the dynamic 
+% Hale et al. 2020 Mutualistic interactions increase diversity, stability,
+% and function in multiplex networks of pollinators in food webs
+
+% See the main text Methods for a detailed description of the dynamic 
 %   models and analysis implemented in this code.
 %
 % SYSTEM REQUIREMENTS
@@ -16,15 +17,19 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % Software Requirements
 %	This code is supported for MATLAB R2018b or later. It has been 
 %	tested on macOS Mojave 10.14.6. Some functions use the Parallel
-%   	Computing Toolbox, but that is optional, as described by comments 
-%   	in the scripts.
+%   Computing Toolbox, but that is optional, as described by comments in
+%   the scripts.
 %
+% DATA AVAILABILITY
+%   Network structures and parameterization to reproduce Figs. 3-6 are 
+%   available in a public google drive at: https://tinyurl.com/qr4xbdd
+%   The data is quite large (148 MB zipped). 
 %
 % INSTALLATION
 % 	To use this code, download the whole folder and use it as a
 % 	working directory for MATLAB R2018b or later. Execute
 % 	RUN_DEMO_SIMULATIONS.m. The code is working correctly if it produces
-% 	six figures that match the panels in Fig. S1 of the manuscript 
+% 	six figures that match the panels in Fig. 3 of the manuscript 
 %	(expect approximately 2 minutes for run time). 
 %
 % REPRODUCTION
@@ -41,7 +46,7 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 %	including means and standard deviations across treatment and for each
 %	level of initial diversity within treatments were calculated. These
 %	calculations are easily performed in JMP (version Pro 14 was used to
-%	create main-text Figs. 4 & 5).
+%	create main text Figs. 5 & 6).
 %
 % LICENSE
 % 	The MIT License (MIT)
@@ -66,8 +71,9 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 % SOFTWARE.
 %
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
-%   increase diversity, stability, and function in multiplex networks
+% Hale, K.R.S. (2020). Mutualistic interactions increase diversity, 
+%   stability, and function in multiplex networks of pollinators in food webs
+
 %
 % Other Notes
 % Individual functions are quite thoroughly commented. The remainder of 
@@ -104,7 +110,7 @@ Companion code for Hale et al. 2020: Pollinators in food webs: Mutualistic inter
 %   num_plants: number of plants
 %   fraction_app: fraction of the plants that have pollinators (are 
 %       animal-pollinated plants, hereafter referred to as "app")
-%   pnest: value used in ThÃˆbault & Fontaine (2010)'s algorithm to generate
+%   pnest: value used in Thébault & Fontaine (2010)'s algorithm to generate
 %       pollination networks (see Methods S2)
 %   NODF: nestedness of pollination network
 %   degree_heterogeneity: degree heterogeneity of pollination network

@@ -10,8 +10,8 @@
 % approximately 3 hours to complete. 
 % 
 % CITE THIS CODE AS FOLLOWS:
-% Hale, K.R.S. (2020). Pollinators in food webs: Mutualistic interactions 
-%   increase diversity, stability, and function in multiplex networks
+% Hale, K.R.S. (2020). Mutualistic interactions increase diversity, 
+%   stability, and function in multiplex networks of pollinators in food webs
 
 disp('Loading network structures and parameters...')
 
